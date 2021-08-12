@@ -54,7 +54,7 @@ module.exports = {
                 pseudo: pseudo,
                 email: email,
               },
-              "secret", 
+              `${process.env.JWT_SECRET_KEY}`, 
               {
                 expiresIn: "2h",
               }
@@ -100,7 +100,7 @@ module.exports = {
               pseudo: user.pseudo,
               email: user.email,
             },
-            "secret",
+            `${process.env.JWT_SECRET_KEY}`,
             // pour dire que le token secret expire quand
             {
               expiresIn: "2h",
